@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100&display=swap" rel="stylesheet">
+  <title> Contato</title>
+</head>
+
+<body>
+  <div class="container_ctt">
+    <div id="img_first" style="text-align: center; margin-top: 2rem;">
+      <img class="config_img" src="assets/img/img_logtipo_ong.png" width="250" height="250"
+        alt="img do logotipo da ong">
+    </div>
+
+    <nav id="menu" style="text-align: center; margin: 1.5rem 0;">
+      <button style="font-size: 20px; padding: 15px 30px; margin-right: 15px;" class="lt_menu"
+        onclick="window.location.href='index.html'">Início</button>
+      <button style="font-size: 20px; padding: 15px 30px; margin-right: 15px;" class="lt_menu"
+        onclick="window.location.href='projetos.html'">Projetos</button>
+      <button style="font-size: 20px; padding: 15px 30px;" class="lt_menu"
+        onclick="window.location.href='cadastro.html'">Cadastro</button>
+    </nav>
+
+    <section id="sobre" class="ongc-wrap">
+      <h3 class="tit_sub">Fique à vontade para entrar em contato conosco:</h3>
+
+      <form action="#" method="post" autocomplete="on"></form>
+      <div class="ongc-card">
+        <fieldset>
+          <legend>Dados pessoais</legend>
+
+          <label for="nome">Nome completo:</label><br>
+          <input id="nome" name="nome" type="text" placeholder="Digite seu nome" required size="40">
+          <span id="msg-nome" aria-live="polite"></span><br><br>
+
+          <label for="email">E-mail:</label><br>
+          <input id="email" name="email" type="email" placeholder="exemplo@email.com" required size="40"
+            autocomplete="email">
+          <span id="msg-email" aria-live="polite"></span><br><br>
+
+          <label for="cpf">CPF:</label><br>
+          <input id="cpf" name="cpf" type="text" placeholder="000.000.000-00" maxlength="14" inputmode="numeric"
+            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}|\d{11}" title="Use 000.000.000-00 ou 11 dígitos">
+          <span id="msg-cpf" aria-live="polite"></span><br><br>
+
+          <label for="telefone">Telefone:</label><br>
+          <input id="telefone" name="telefone" type="tel" placeholder="(11) 99999-9999" inputmode="tel"
+            pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}" title="Ex.: (11) 99999-9999">
+          <span id="msg-telefone" aria-live="polite"></span><br><br>
+
+          <label for="dataNascimento">Data de nascimento:</label><br>
+          <input id="dataNascimento" name="dataNascimento" type="date" autocomplete="bday">
+          <span id="msg-data" aria-live="polite"></span><br><br>
+        </fieldset>
+      </div>
+      <div class="ongc-card">
+
+        <div class="ongc-grid">
+          <fieldset>
+            <legend>Endereço</legend>
+
+            <label for="endereco">Endereço:</label><br>
+            <input id="endereco" name="endereco" type="text" placeholder="Rua, número, complemento" size="40"
+              autocomplete="street-address">
+            <span id="msg-endereco" aria-live="polite"></span><br><br>
+
+            <label for="cep">CEP:</label><br>
+            <input id="cep" name="cep" type="text" placeholder="00000-000" maxlength="9" inputmode="numeric"
+              pattern="\d{5}-?\d{3}" title="Ex.: 01234-567" autocomplete="postal-code">
+            <span id="msg-cep" aria-live="polite"></span><br><br>
+
+            <label for="cidade">Cidade:</label><br>
+            <input id="cidade" name="cidade" type="text" placeholder="Sua cidade" autocomplete="address-level2">
+            <span id="msg-cidade" aria-live="polite"></span><br><br>
+
+            <label for="estado">Estado (UF):</label><br>
+            <input id="estado" name="estado" type="text" placeholder="SP" maxlength="2" autocomplete="address-level1">
+            <span id="msg-estado" aria-live="polite"></span><br><br>
+          </fieldset>
+
+          <aside id="contato" class="ongc-card">
+
+            <fieldset>
+              <legend>Mensagem</legend>
+
+              <label for="mensagem">Digite uma mensagem:</label><br>
+              <textarea id="mensagem" name="mensagem" rows="4" cols="40"
+                placeholder="Em caso de dúvida , deixe sua mensagem ..." required></textarea>
+              <span id="msg-mensagem" aria-live="polite"></span><br><br>
+            </fieldset>
+            </form>
+    </section>
+
+
+    <form action="#" method="post" autocomplete="on">
+
+      <div style="text-align: center; margin-top: 10px;">
+        <button type="submit" style="
+    background-color: #1d4ed8;
+    color: white;
+    font-size: 18px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  ">
+          Enviar
+        </button>
+      </div>
+    </form>
+    <style>
+      /* ===== Estilos locais para o bloco ONGConecta ===== */
+      .ongc-wrap {
+        --bg: #f7f9fb;
+        --card: #ffffff;
+        --ink: #0f172a;
+        --muted: #475569;
+        --brand: #1d4ed8;
+        --brand-2: #0ea5e9;
+        margin: 3rem auto;
+        padding: clamp(1rem, 2vw, 2rem);
+        max-width: 1100px;
+        background: var(--bg);
+        border-radius: 1.25rem
+      }
+
+      .ongc-grid {
+        display: grid;
+        gap: 1.25rem;
+        grid-template-columns: 1fr;
+        margin-top: 1rem
+      }
+
+      @media (min-width: 860px) {
+        .ongc-grid {
+          grid-template-columns: 1fr 1fr
+        }
+      }
+
+      .ongc-card {
+        background: var(--card);
+        border: 1px solid #e5e7eb;
+        border-radius: 1rem;
+        padding: clamp(1rem, 2vw, 1.5rem);
+        box-shadow: 0 2px 10px rgba(2, 6, 23, .04)
+      }
+
+      .ongc-card h2,
+      .ongc-card h3 {
+        margin: 0 0 .5rem 0;
+        color: var(--ink);
+        letter-spacing: .2px
+      }
+
+      .ongc-card p {
+        color: var(--muted);
+        line-height: 1.6;
+        margin: .5rem 0
+      }
+
+      .ongc-bullets {
+        margin: .5rem 0 0 1rem;
+        color: var(--muted)
+      }
+
+      .ongc-bullets li {
+        margin: .35rem 0
+      }
+
+      .ongc-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1rem 0;
+        display: grid;
+        gap: .6rem
+      }
+
+      .ongc-list li {
+        display: flex;
+        align-items: center;
+        gap: .6rem;
+        color: var(--muted)
+      }
+
+      .ongc-list a {
+        color: var(--brand);
+        text-decoration: none
+      }
+
+      .ongc-list a:hover {
+        text-decoration: underline
+      }
+
+      .ongc-list svg {
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
+        color: var(--brand)
+      }
+
+      .ongc-socials {
+        display: flex;
+        gap: .5rem;
+        margin-top: .25rem
+      }
+
+      .ongc-socials a {
+        display: inline-flex;
+        padding: .4rem;
+        border-radius: .6rem;
+        background: #eef2ff
+      }
+
+      .ongc-socials svg {
+        width: 18px;
+        height: 18px;
+        color: var(--brand)
+      }
+
+      .ongc-form {
+        display: grid;
+        gap: .6rem
+      }
+
+      .ongc-form label span {
+        display: block;
+        font-size: .9rem;
+        color: var(--ink);
+        margin-bottom: .2rem
+      }
+
+      .ongc-form input,
+      .ongc-form textarea {
+        width: 100%;
+        padding: .7rem .8rem;
+        border: 1px solid #e5e7eb;
+        border-radius: .6rem;
+        font: inherit;
+        color: var(--ink);
+        background: #fff;
+        outline: none;
+      }
+
+      .ongc-form input:focus,
+      .ongc-form textarea:focus {
+        border-color: var(--brand-2);
+        box-shadow: 0 0 0 3px rgba(14, 165, 233, .18)
+      }
+
+      .ongc-form button {
+        margin-top: .25rem;
+        padding: .7rem 1rem;
+        border: 0;
+        border-radius: .7rem;
+        cursor: pointer;
+        font-weight: 600;
+        color: #fff;
+        background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      }
+
+      .ongc-form button:hover {
+        filter: brightness(1.03)
+      }
+    </style>
+
+
+  </div>
+  </div>
+  <footer style="text-align:center; padding:16px; color:#666; font-size:12px;">
+    © <span aria-label="ano atual">2025</span> • ONGConecta
+  </footer>
+</body>
+
+</html>
