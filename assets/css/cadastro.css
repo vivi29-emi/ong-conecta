@@ -1,0 +1,154 @@
+
+        .ongc-wrap {
+          --bg: #f7f9fb;
+          --card: #ffffff;
+          --ink: #0f172a;
+          --muted: #475569;
+          --brand: #1d4ed8;
+          --brand-2: #0ea5e9;
+          margin: 3rem auto;
+          padding: clamp(1rem, 2vw, 2rem);
+          max-width: 1100px;
+          background: var(--bg);
+          border-radius: 1.25rem
+        }
+
+        .ongc-grid {
+          display: grid;
+          gap: 1.25rem;
+          grid-template-columns: 1fr;
+          margin-top: 1rem
+        }
+
+        @media (min-width: 860px) {
+          .ongc-grid {
+            grid-template-columns: 1fr 1fr
+          }
+        }
+
+        .ongc-card {
+          background: var(--card);
+          border: 1px solid #e5e7eb;
+          border-radius: 1rem;
+          padding: clamp(1rem, 2vw, 1.5rem);
+          box-shadow: 0 2px 10px rgba(2, 6, 23, .04)
+        }
+
+        .ongc-card h2,
+        .ongc-card h3 {
+          margin: 0 0 .5rem 0;
+          color: var(--ink);
+          letter-spacing: .2px
+        }
+
+        .ongc-card p {
+          color: var(--muted);
+          line-height: 1.6;
+          margin: .5rem 0
+        }
+
+        .ongc-bullets {
+          margin: .5rem 0 0 1rem;
+          color: var(--muted)
+        }
+
+        .ongc-bullets li {
+          margin: .35rem 0
+        }
+
+        .ongc-list {
+          list-style: none;
+          padding: 0;
+          margin: 0 0 1rem 0;
+          display: grid;
+          gap: .6rem
+        }
+
+        .ongc-list li {
+          display: flex;
+          align-items: center;
+          gap: .6rem;
+          color: var(--muted)
+        }
+
+        .ongc-list a {
+          color: var(--brand);
+          text-decoration: none
+        }
+
+        .ongc-list a:hover {
+          text-decoration: underline
+        }
+
+        .ongc-list svg {
+          width: 20px;
+          height: 20px;
+          fill: currentColor;
+          color: var(--brand)
+        }
+
+        .ongc-socials {
+          display: flex;
+          gap: .5rem;
+          margin-top: .25rem
+        }
+
+        .ongc-socials a {
+          display: inline-flex;
+          padding: .4rem;
+          border-radius: .6rem;
+          background: #eef2ff
+        }
+
+        .ongc-socials svg {
+          width: 18px;
+          height: 18px;
+          color: var(--brand)
+        }
+
+        .ongc-form {
+          display: grid;
+          gap: .6rem
+        }
+
+        .ongc-form label span {
+          display: block;
+          font-size: .9rem;
+          color: var(--ink);
+          margin-bottom: .2rem
+        }
+
+        .ongc-form input,
+        .ongc-form textarea {
+          width: 100%;
+          padding: .7rem .8rem;
+          border: 1px solid #e5e7eb;
+          border-radius: .6rem;
+          font: inherit;
+          color: var(--ink);
+          background: #fff;
+          outline: none;
+        }
+
+        .ongc-form input:focus,
+        .ongc-form textarea:focus {
+          border-color: var(--brand-2);
+          box-shadow: 0 0 0 3px rgba(14, 165, 233, .18)
+        }
+
+        .ongc-form button {
+          margin-top: .25rem;
+          padding: .7rem 1rem;
+          border: 0;
+          border-radius: .7rem;
+          cursor: pointer;
+          font-weight: 600;
+          color: #fff;
+          background: linear-gradient(90deg, var(--brand), var(--brand-2));
+        }
+
+        .ongc-form button:hover {
+          filter: brightness(1.03)
+        }
+      
+      
