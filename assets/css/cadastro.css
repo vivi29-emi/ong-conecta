@@ -1,0 +1,191 @@
+/* ------------------------------
+   Base & Theme
+--------------------------------*/
+:root{
+  --bg: #0f172a;            /* fundo escuro elegante */
+  --card: #111827;          /* cartas/painéis */
+  --muted: #94a3b8;         /* textos secundários */
+  --text: #e5e7eb;          /* texto padrão */
+  --primary: #1d4ed8;       /* azul CTA */
+  --primary-hover: #1e40af;
+  --ring: rgba(29,78,216,.45);
+  --danger: #ef4444;
+  --radius: 14px;           /* cantos arredondados */
+  --shadow: 0 10px 25px rgba(0,0,0,.35);
+}
+
+*{ box-sizing: border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  font-family: 'Roboto', system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  background: linear-gradient(180deg, #0b1220 0%, #0f172a 100%);
+  color: var(--text);
+  line-height:1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#img_first {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;      /* Centraliza verticalmente (se quiser) */
+  margin-top: 2rem;
+}
+
+.config_img {
+  display: block;
+  margin: 2rem auto; /* Centraliza horizontalmente */
+}
+
+/* ------------------------------
+   Layout
+--------------------------------*/
+.container{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px 20px 24px;
+}
+
+#logo-wrap{
+  text-align:center;
+  margin-top: 20px;
+}
+.logo{
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,.35));
+}
+
+/* ------------------------------
+   Menu
+--------------------------------*/
+.menu{
+  display:flex;
+  justify-content:center;
+  gap: 14px;
+  margin: 24px 0 6px;
+  flex-wrap: wrap;
+}
+.btn-link{
+  font-size: 18px;
+  padding: 12px 22px;
+  border-radius: var(--radius);
+  border: 1px solid #24304a;
+  background: #0b1324;
+  color: var(--text);
+  cursor:pointer;
+  transition: transform .06s ease, border-color .2s ease;
+}
+.btn-link:hover{ background:#0f1a33; transform: translateY(-1px); }
+.btn-link.is-active{ border-color: var(--primary); }
+
+/* ------------------------------
+   Section
+--------------------------------*/
+.section-title{
+  font-size: 22px;
+  font-weight: 600;
+  text-align:center;
+  margin: 22px 0 18px;
+  color: #dbeafe;
+}
+
+/* ------------------------------
+   Cards & Grid
+--------------------------------*/
+.card{
+  background: linear-gradient(180deg, #111827 0%, #0f172a 120%);
+  border: 1px solid #1f2937;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin-bottom: 18px;
+}
+
+.grid{
+  display: grid;
+  gap: 18px;
+}
+@media (min-width: 820px){
+  .grid{
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+/* ------------------------------
+   Fieldset & Forms
+--------------------------------*/
+fieldset{
+  border: 1px dashed #22304a;
+  border-radius: 12px;
+  padding: 16px;
+}
+legend{
+  padding: 0 10px;
+  color: #c7d2fe;
+  font-weight: 600;
+}
+
+label{
+  display:block;
+  margin: 12px 0 6px;
+  color: #cbd5e1;
+}
+
+input, textarea, select{
+  width:100%;
+  padding: 12px 14px;
+  background: #0b1324;
+  border: 1px solid #24304a;
+  border-radius: 10px;
+  color: var(--text);
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease, transform .06s ease;
+}
+input::placeholder, textarea::placeholder{ color: #64748b; }
+
+input:focus, textarea:focus{
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--ring);
+}
+
+input:invalid, textarea:invalid{
+  border-color: #7f1d1d;
+}
+input:invalid:focus, textarea:invalid:focus{
+  box-shadow: 0 0 0 4px rgba(239,68,68,.35);
+}
+
+textarea{ resize: vertical; min-height: 140px; }
+
+
+.actions{
+  display:flex;
+  justify-content:center;
+  margin-top: 14px;
+}
+
+.btn-primary{
+  background: var(--primary);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 12px;
+  cursor:pointer;
+  transition: transform .06s ease, box-shadow .2s ease;
+  box-shadow: 0 8px 24px rgba(29,78,216,.35);
+}
+.btn-primary:hover{ background: var(--primary-hover); transform: translateY(-1px); }
+.btn-primary:active{ transform: translateY(0); }
+
+/* ------------------------------
+   Footer
+--------------------------------*/
+.footer{
+  text-align:center;
+  padding: 20px 12px 36px;
+  color: var(--muted);
+  font-size: 12px;
+}

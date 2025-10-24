@@ -1,0 +1,58 @@
+:root{
+  --bg:#0f172a;        /* fundo escuro */
+  --panel:#12213a;     /* cards */
+  --text:#e6e6e6;      /* texto */
+  --muted:#8b93a1;
+  --brand:#2ea0ff;     /* botões */
+  --brand-hover:#1983da;
+  --radius:16px;
+  --shadow:0 8px 24px rgba(0,0,0,.25);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}
+
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+
+/* Header */
+.header{display:flex;flex-direction:column;align-items:center;gap:16px;padding:32px 16px}
+.header__logo img{display:block;width:250px;height:auto}
+
+/* Menu */
+.menu{display:flex;gap:16px}
+.btn{
+  font-size:18px;padding:12px 24px;border:none;border-radius:12px;
+  background:var(--brand);color:#fff;cursor:pointer;box-shadow:var(--shadow)
+}
+.btn:hover{background:var(--brand-hover)}
+
+/* Seções */
+.ongc-wrap{display:flex;flex-direction:column;gap:24px;margin:16px 0}
+.ongc-grid{
+  display:grid;grid-template-columns:1fr;gap:24px
+}
+@media (min-width: 860px){
+  .ongc-grid{grid-template-columns: 1.2fr .8fr}
+}
+
+/* Cards */
+.ongc-card{
+  background:var(--panel);border-radius:var(--radius);
+  padding:24px;box-shadow:var(--shadow)
+}
+.ongc-card h2,.ongc-card h3{margin-top:0}
+.ongc-bullets{margin:12px 0 0 18px}
+.ongc-bullets li{margin:6px 0}
+
+/* Lista de contato */
+.ongc-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.ongc-list li{display:flex;align-items:center;gap:10px;color:var(--text)}
+.ongc-list a{color:#aad1ff;text-decoration:none}
+.ongc-list a:hover{text-decoration:underline}
+.ongc-list svg{width:20px;height:20px;fill:var(--muted)}
+
+.ongc-socials{display:flex;gap:10px}
+.ongc-socials svg{width:22px;height:22px}
+
+/* Rodapé */
+.footer{text-align:center;padding:20px;color:#7f8a99;font-size:12px}
