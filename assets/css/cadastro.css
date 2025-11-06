@@ -178,7 +178,11 @@ textarea{ resize: vertical; min-height: 140px; }
 }
 
 
-.btn-primary:hover{ background: var(--primary-hover); transform: translateY(-1px); }
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(29,78,216,.45);
+}
 .btn-primary:active{ transform: translateY(0); }
 
 /* ------------------------------
