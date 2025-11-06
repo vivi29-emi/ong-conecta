@@ -134,13 +134,6 @@ export const CadastroView = {
              <div class="actions">
                 ${button('Enviar', 'type="submit" class="btn-primary"')}
               </div>
-
-
-              <div class="ultimas-mensagens">
-                <h4>Últimas mensagens</h4>
-                <ul id="msgs" class="ongc-list small"></ul>
-              </div>
-            </aside>
           </div>
         </form>
       </section>
