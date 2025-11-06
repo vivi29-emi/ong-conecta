@@ -1,99 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets/css/cadastro.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100&display=swap" rel="stylesheet">
-  <title> Contato</title>
-</head>
+    <title>Cadastro — ONGConecta</title>
 
-<body>
-  <div class="container">
-<div id="img_first">
-  <img class="config_img" src="/assets/img/img_logtipo_ong.png" width="250" height="250"
-    alt="img do logotipo da ong">
-</div>
+    <!-- CSS comum e específico -->
+    <link rel="stylesheet" href="/assets/css/common.css">
+    <link rel="stylesheet" href="/assets/css/cadastro.css">
 
-    <nav class="menu">
-      <button class="btn-link" onclick="window.location.href='index.html'">Início</button>
-      <button class="btn-link" onclick="window.location.href='projetos.html'">Projetos</button>
-      <button class="btn-link is-active" onclick="window.location.href='cadastro.html'">Cadastro</button>
-    </nav>
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100&display=swap" rel="stylesheet">
+  </head>
 
-    <section id="sobre" class="section">
-      <h3 class="section-title">Fique à vontade para entrar em contato conosco:</h3>
-
-      <form action="https://formspree.io/f/xzzjwboq" method="post" autocomplete="on">
-        <div class="card">
-          <fieldset>
-            <legend>Dados pessoais</legend>
-
-            <label for="nome">Nome completo</label>
-            <input id="nome" name="nome" type="text" placeholder="Digite seu nome" required>
-
-            <label for="email">E-mail</label>
-            <input id="email" name="email" type="email" placeholder="exemplo@email.com" required autocomplete="email">
-
-            <label for="cpf">CPF</label>
-            <input id="cpf" name="cpf" type="text" placeholder="000.000.000-00" maxlength="14"
-                   inputmode="numeric" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}|\d{11}"
-                   title="Use 000.000.000-00 ou 11 dígitos">
-
-            <label for="telefone">Telefone</label>
-            <input id="telefone" name="telefone" type="tel" placeholder="(11) 99999-9999" inputmode="tel"
-                   pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}" title="Ex.: (11) 99999-9999">
-
-            <label for="dataNascimento">Data de nascimento</label>
-            <input id="dataNascimento" name="dataNascimento" type="date" autocomplete="bday">
-          </fieldset>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div id="img_first" class="logo">
+          <img
+            class="config_img"
+            src="/assets/img/img_logtipo_ong.png"
+            width="250"
+            height="250"
+            alt="Logotipo da ONGConecta">
         </div>
 
-        <div class="card grid">
-          <fieldset>
-            <legend>Endereço</legend>
+        <nav class="menu" aria-label="Navegação principal">
+          <a class="btn" href="#/home">Início</a>
+          <a class="btn" href="#/projetos">Projetos</a>
+          <a class="btn" href="#/cadastro">Cadastro</a>
+        </nav>
+      </header>
 
-            <label for="endereco">Endereço</label>
-            <input id="endereco" name="endereco" type="text" placeholder="Rua, número, complemento" autocomplete="street-address">
+      <!-- Aqui o JS vai montar o conteúdo -->
+      <main id="app-root"></main>
 
-            <label for="cep">CEP</label>
-            <input id="cep" name="cep" type="text" placeholder="00000-000" maxlength="9" inputmode="numeric"
-                   pattern="\d{5}-?\d{3}" title="Ex.: 01234-567" autocomplete="postal-code">
+      <footer class="footer">
+        © <span aria-label="ano atual">2025</span> • ONGConecta
+      </footer>
+    </div>
 
-            <label for="cidade">Cidade</label>
-            <input id="cidade" name="cidade" type="text" placeholder="Sua cidade" autocomplete="address-level2">
-
-            <label for="estado">Estado (UF)</label>
-            <input id="estado" name="estado" type="text" placeholder="SP" maxlength="2" autocomplete="address-level1">
-          </fieldset>
-
-          <aside class="card">
-            <fieldset>
-              <legend>Mensagem</legend>
-              <label for="mensagem">Digite uma mensagem</label>
-              <textarea id="mensagem" name="mensagem" rows="6" placeholder="Em caso de dúvida, deixe sua mensagem..." required></textarea>
-            </fieldset>
-
-            <div class="actions">
-              <button type="submit" class="btn-primary">Enviar</button>
-            </div>
-          </aside>
-        </div>
-
-        <!-- Redireciona para página de sucesso (crie pages/sucesso.html se quiser feedback ao usuário) -->
-        <input type="hidden" name="_next" value="http://127.0.0.1:5500/pages/sucesso.html">
-      </form>
-    </section>
-  </div>
-
-  <footer class="footer">
-    © <span aria-label="ano atual">2025</span> • ONGConecta
-  </footer>
-</body>
-
-
+    <!-- Scripts -->
+    <script type="module" src="/assets/js/cadastro.js"></script>
+  </body>
 </html>
