@@ -2,15 +2,15 @@
    Base & Theme
 --------------------------------*/
 :root{
-  --bg: #0f172a;            /* fundo escuro elegante */
-  --card: #111827;          /* cartas/painéis */
-  --muted: #94a3b8;         /* textos secundários */
-  --text: #e5e7eb;          /* texto padrão */
-  --primary: #1d4ed8;       /* azul CTA */
+  --bg: #0f172a;           
+  --card: #111827;          
+  --muted: #94a3b8;         
+  --text: #e5e7eb;          
+  --primary: #1d4ed8;       
   --primary-hover: #1e40af;
   --ring: rgba(29,78,216,.45);
   --danger: #ef4444;
-  --radius: 14px;           /* cantos arredondados */
+  --radius: 14px;          
   --shadow: 0 10px 25px rgba(0,0,0,.35);
 }
 
@@ -28,14 +28,14 @@ body{
 
 #img_first {
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center;      /* Centraliza verticalmente (se quiser) */
+  justify-content: center; 
+  align-items: center;      
   margin-top: 2rem;
 }
 
 .config_img {
   display: block;
-  margin: 2rem auto; /* Centraliza horizontalmente */
+  margin: 2rem auto; 
 }
 
 /* ------------------------------
@@ -158,25 +158,26 @@ input:invalid:focus, textarea:invalid:focus{
 
 textarea{ resize: vertical; min-height: 140px; }
 
-
 .actions{
-  display:flex;
-  justify-content:center;
-  margin-top: 14px;
+  margin-top: 18px;
 }
 
 .btn-primary{
+  display: block;    
+  width: 100%;       
   background: var(--primary);
   color: #fff;
-  font-size: 18px;
-  font-weight: 600;
-  padding: 12px 28px;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 18px 0;  
   border: none;
-  border-radius: 12px;
-  cursor:pointer;
-  transition: transform .06s ease, box-shadow .2s ease;
-  box-shadow: 0 8px 24px rgba(29,78,216,.35);
+  border-radius: 0;  
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 24px rgba(29, 78, 216, 0.35);
 }
+
+
 .btn-primary:hover{ background: var(--primary-hover); transform: translateY(-1px); }
 .btn-primary:active{ transform: translateY(0); }
 
@@ -189,3 +190,16 @@ textarea{ resize: vertical; min-height: 140px; }
   color: var(--muted);
   font-size: 12px;
 }
+
+/* helpers */
+.form-help{
+  color: var(--muted);
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+
+.sucesso-title{ text-align: center; color: #dbeafe; }
+.sucesso-desc{ text-align: center; color: #cbd5e1; }
+
