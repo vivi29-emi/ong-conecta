@@ -13,9 +13,9 @@ Cada organização é exibida em um **card visual**, com imagem, descrição e l
 
 - [x] Exibição de **cards interativos** com imagem, título, descrição e botão.
 - [x] Estrutura organizada de pastas para facilitar manutenção.
-  
+- [x] Base pronta para integrar estilos via **CSS** 
+- [x] Base com  **JavaScript**.
 ## ✨ Proximos passos
-- [ ] Base pronta para integrar estilos via **CSS** e scripts futuros em **JavaScript**.
-- [ ] Pode ser hospedado em qualquer serviço estático (GitHub Pages, Netlify, Vercel etc.).
+- [ ] Deploy.
 
 ---

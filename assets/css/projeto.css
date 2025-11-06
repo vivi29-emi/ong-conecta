@@ -1,7 +1,9 @@
-/* --------- Reset/Setup --------- */
 *,
 *::before,
 *::after { box-sizing: border-box; }
+
+
+
 
 :root{
   --bg: #f6f7fb;
@@ -10,13 +12,75 @@
   --line: #e5e7eb;
   --card: #fff;
 
-  --brand: #0f172a;      /* base escura */
-  --brand-ghost: #e2e8f0; /* botão contorno claro */
+  --brand: #0f172a;     
+  --brand-ghost: #e2e8f0; 
   --radius: 16px;
   --shadow: 0 2px 8px rgba(0,0,0,.06);
 }
+.cards {
+  max-width: 1100px;
+  margin: 12px auto 40px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
 
-/* Acessibilidade: foco visível */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.projetos-cards .card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.card__img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  background: #ddd;
+  transition: transform 0.25s ease;
+}
+
+.card:hover .card__img {
+  transform: scale(1.03);
+}
+
+.card__body {
+  padding: 16px;
+}
+
+.card__title {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.card__text {
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+
+
+
 :focus-visible {
   outline: 3px solid #2563eb;
   outline-offset: 2px;
@@ -31,14 +95,12 @@ body.page{
   -webkit-font-smoothing: antialiased;
 }
 
-/* Container geral */
 .container{
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 16px 40px;
 }
 
-/* --------- Header --------- */
 .site-header{
   display: grid;
   justify-items: center;
@@ -59,7 +121,6 @@ body.page{
   object-fit: contain;
 }
 
-/* Navegação */
 .site-nav{
   display: flex;
   flex-wrap: wrap;
@@ -68,7 +129,6 @@ body.page{
   margin: 8px 0 4px;
 }
 
-/* --------- Botões reutilizáveis --------- */
 .btn{
   appearance: none;
   border: 1px solid var(--line);
@@ -79,7 +139,7 @@ body.page{
   font-size: 16px;
   text-decoration: none;
   display: inline-block;
-  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+  transition: transform .12s ease, box-shadow .12s ease;
 }
 .btn:hover{ transform: translateY(-1px); box-shadow: var(--shadow); }
 .btn:active{ transform: translateY(0); }
@@ -108,7 +168,6 @@ body.page{
 }
 
 
-/* Título + subtítulo */
 .site-hero{
   text-align: center;
   padding: 8px 16px 0;
@@ -122,50 +181,8 @@ body.page{
   color: var(--muted);
 }
 
-/* --------- Grid de Cards --------- */
-.cards{
-  max-width: 1100px;
-  margin: 12px auto 40px;
-  display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
 
-/* Card */
-.card{
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  display: flex;
-  flex-direction: column;
-}
-.card__img{
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  background: #ddd;
-}
-.card__body{
-  padding: 16px;
-}
-.card__title{
-  margin: 0 0 6px;
-  font-size: 18px;
-}
-.card__text{
-  margin: 0 0 12px;
-  color: var(--muted);
-}
-.card__actions{
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
 
-/* --------- Seções amplas --------- */
 .section{
   grid-column: 1 / -1;
   margin: 12px 8px 8px;
@@ -175,14 +192,14 @@ body.page{
 .section p{ color: var(--text); }
 .section ul{ padding-left: 18px; }
 
-.divider{
+.divider {
   grid-column: 1 / -1;
   border: none;
   border-top: 1px solid var(--line);
-  margin: 8px 0 12px;
+  margin: 40px 0 20px;
 }
 
-/* --------- Rodapé --------- */
+
 .site-footer{
   text-align: center;
   padding: 16px;
@@ -190,13 +207,11 @@ body.page{
   font-size: 12px;
 }
 
-/* --------- Responsividade --------- */
 @media (max-width: 480px){
   .brand__img{ width: 180px; height: 180px; }
   .btn{ padding: 10px 16px; font-size: 15px; }
 }
 
-/* Usuários que preferem menos animação */
 @media (prefers-reduced-motion: reduce){
   .btn{ transition: none; }
 }
